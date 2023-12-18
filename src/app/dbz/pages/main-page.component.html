@@ -1,0 +1,18 @@
+<h1>dbz page Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- el array characters esta en el padre y le envia al hijo characterList para que se cargue  -->
+    <dbz-list [characterList]="characters"
+    (emitIdArray)="deleteCharacterById($event)"
+    ></dbz-list>
+
+
+  </div>
+  <div class="col">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacterPadre($event)" ></dbz-add-character>
+
+  </div>
+</div>
